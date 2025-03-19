@@ -25,3 +25,18 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+
+  # Enable version updates for pip
+  - package-ecosystem: "pip"
+    directory: "/auth-service"
+    schedule:
+      interval: "daily"
+    labels:
+      - "triage-required"
+    assignees:
+      - "a-bartkus"
+    reviewers:
+      - "a-bartkus"
+    commit-message:
+      prefix: "pip"
+
